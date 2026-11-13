@@ -55,7 +55,7 @@ return rows;
 
 Two honest limits that decide whether this is enough:
 
-- It does not understand quoted delimiters. A cell containing `;` inside quotes still breaks. If your file has quoted separators, a real parser has to do the work.
+- It does not understand quoted delimiters. A cell containing `;` inside quotes still breaks. If your file has quoted separators, a real parser has to do the work — the tested quote-aware parser and importable workflow are in [n8n-csv-to-google-sheets-columns-shifted](https://github.com/fejzadenis/n8n-csv-to-google-sheets-columns-shifted).
 - It repairs shape, not meaning. A row that lost a value upstream stays wrong; `__source_line` is there so you can go back and check those rows in the original file.
 
 ## Fix 3 — repair it in the browser, free
